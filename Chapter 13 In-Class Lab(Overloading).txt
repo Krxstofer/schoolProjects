@@ -1,0 +1,64 @@
+This lab will exercise your understanding of some of the concepts covered in Chapter 13:  
+  overloading operators
+  
+1.  Create a class, name of your choice, to represent a college class in which students might register.
+
+    a.  Create three private member variables:
+        
+        Class Name (to hold values such as CSC210)
+        Number of Students
+        Class Hours
+    
+    b.  Overload the >> operator to input, from cin, into the class object, the Class Name and Class Hours
+        
+    c.  Overload the << operator to output all the private member variables 
+    
+    d.  Overload the + (plus) operator to add a value to the Number of Students private member variable.
+        This will represent students registering for the class. 
+    
+    e.  Overload the - (minus) operator to subtract a value from the Number of Students
+        private member variable.  This will represent students dropping the class.
+        
+    f.  The default constructor should initialize the private member variables appropriately.
+    
+ 2. Write a client program to:
+  
+    a.  Upon program execution, create one class object that instantiates a college class, for example CSC210 
+        with 4 hours.
+        
+        Use the overloaded >> operator to input class name and class hours from cin directly into the
+        class object
+    
+    b.  Create a menu to perform the following processes:
+    
+    	  Enter 1 to register students
+    	  
+    	    Ask for number to add
+    	    Add value to class object using overloaded + operator (classobject = classobject + valueToAdd)
+    	    
+    	  Enter 2 to drop students
+    	    Ask for number to drop
+	    Subtract value from class object using overloaded - operator (classobject = classobject = valueToDrop)
+
+    	  
+    	  Enter 3 to print class information
+    	  
+    	  
+    	  Enter -1 to end.  The program should present the menu (loop) for selecting 1-3
+    	    until -1 is entered
+
+Complete as much as you can before you leave ensuring what you've completed compiles.  These labs are 
+entirely for your practice.
+
+The program may be named any name of our choice, must have a .cpp extention; variables may be any name of your 
+choice.
+
+You DO NOT have to comment these programs, however, please include your NAME as a comment in ALL code files.
+
+SUBMIT the code ( *.h and *.cpp) files and the project file (*.dev or *.cbp).   All files must be submitted and the 
+program MUST compile and run to receive credit.
+
+You MAY zip the files and submit the zipped files.
+
+Questions will be entertained; solution will be discussed in class. This is a collaborative effort to provide 
+examples and practice for your understanding.

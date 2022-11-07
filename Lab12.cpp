@@ -1,83 +1,39 @@
-// Kristofer Norman 12/03/21
-// Lab practicing some of the things learned in chapter 12
-// implementaion file
+// Lab12.cpp : Kristofer Norman 
+// 02/01/2022
 
-#include "Students.h"
 #include <iostream>
-#include <fstream>
-#include <string>
-#include <iomanip>
 
 using namespace std;
 
-// my default constructor 
-Students::Students()
+int main()
 {
+	int x, y;
+	int *p, *q;
 
-	firstN = ' ';
-	lastN = ' ';
-	address = ' ';
-	city = ' ';
-	state = ' ';
-	zip = ' ';
-	earnedGpoints = 0.0;
-	attemptCredhours = 0.0;
-	gpa = 0.0;
+	x = 2;
+	y = 8;
+	p = &x;
+	q = &y;
+
+	cout << "The adress of x : " << &x << " " << "The value of x : " << x << endl;
+	cout << "The value of p : " << p << " " << "The value of *p" << *p << endl;
+	cout << "The adress of y : " << &y << " " << "The value of y : " << y << endl;
+	cout << "The value of q : " << q << " " << "The value of *q : " << *q << endl;
+	cout << "The adress of p : " << &p << endl;
+	cout << "The adress of q : " << &q << endl;
+
+	char s[10] = "abcde";
+	char * cptr;
+	cptr = s;
+
+	cout << *cptr;
+
+	while (*cptr) {
+		cptr;
+		cout << *cptr;
+	}
+	
+	return 0;
+
 }
 
-Students::Students(string initFirstn, string initLastn, string initAddress, string initCity,
-	string initState, string initZip)
-{
-	firstN = initFirstn;
-	lastN = initLastn;
-	address = initAddress;
-	city = initCity;
-	state = initState;
-	zip = initZip;
-}
-
-Students::Students(string initFirstn, string initLastn, string initAddress, string initCity,
-	string initState, string initZip, float initEarned, float initAttempt)
-{
-	firstN = initFirstn;
-	lastN = initLastn;
-	address = initAddress;
-	city = initCity;
-	state = initState;
-	zip = initZip;
-	earnedGpoints = initEarned;
-	attemptCredhours = initAttempt;
-}
-
-void Students::setAttemptValue(float inAttemptValue)
-{
-	attemptCredhours = inAttemptValue;
-}
-
-void Students::setEarnedValue(float inEarnedValue)
-{
-	earnedGpoints = inEarnedValue;
-}
-
-void Students::StudentsGPAcalc()
-{
-	gpa = earnedGpoints / attemptCredhours;
-}
-
-void Students::StudentsGPAcalc(float inEarnedValue, float inAttemptValue) 
-{
-	gpa = inEarnedValue / inAttemptValue;
-}
-
-void Students::Display() const
-{
-	cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
-	cout << "Student Name: " << firstN << lastN << endl; 
-	cout << "Address: " << address << " " << city << " " << state << " " << zip << endl;
-	cout << fixed << showpoint << setprecision(2);
-	cout << "Grade points earned: " << earnedGpoints << endl;
-	cout << "Grade points attempted: " << attemptCredhours << endl;
-	cout << "Grade point Average: " << gpa << endl; 
-	cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
-
-}
